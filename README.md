@@ -40,7 +40,11 @@ A secure REST API for an internal ticket management system where employees can s
    DB_PASSWORD=your_password
    ```
 
-4. Remove unnecessary frontend files (API-only project):
+4. Set the api
+Run the following command to initialize or set up your API scaffolding:
+`php artisan install:api`
+
+5. Remove unnecessary frontend files (API-only project):
    ```bash
    # Remove frontend-related directories
    rm -rf resources/css/
@@ -58,19 +62,18 @@ A secure REST API for an internal ticket management system where employees can s
    rm -rf tests/Unit/
    ```
 
-5. Create migrations, models, and controllers:
+6. Create migrations, models, and controllers:
    ```bash
-   php artisan make:model User -m
-   php artisan make:model Ticket -m
-   php artisan make:model Comment -m
+   php artisan make:model Ticket -mcr --policy
+   php artisan make:model Comment -mcr
    ```
 
-6. Run migrations and seed the database:
+7. Run migrations and seed the database:
    ```bash
    php artisan migrate --seed
    ```
 
-7. Start the development server:
+8. Start the development server:
    ```bash
    php artisan serve
    ```
