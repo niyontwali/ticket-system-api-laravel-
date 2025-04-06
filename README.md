@@ -42,7 +42,9 @@ A secure REST API for an internal ticket management system where employees can s
 
 4. Set the api
 Run the following command to initialize or set up your API scaffolding:
-`php artisan install:api`
+```bash
+php artisan install:api
+```
 
 5. Remove unnecessary frontend files (API-only project):
    ```bash
