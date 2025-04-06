@@ -269,14 +269,6 @@ This API uses Laravel Sanctum for token-based authentication. Include the token 
 Authorization: Bearer {your_token}
 ```
 
-## Testing
-
-Run the automated test suite:
-
-```bash
-php artisan test
-```
-
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
